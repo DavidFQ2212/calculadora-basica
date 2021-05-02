@@ -75,6 +75,11 @@ CALCULADORA operacion = new CALCULADORA();
 
         btnLimpiar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnLimpiar.setText("Limpiar");
+        btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimpiarActionPerformed(evt);
+            }
+        });
 
         txtNum1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
 
@@ -215,6 +220,12 @@ CALCULADORA operacion = new CALCULADORA();
        String res1 = String.valueOf(res);
         txtResultado.setText(res1);
     }//GEN-LAST:event_btnDivicionActionPerformed
+
+    private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
+        txtNum1.setText("");
+        txtNum2.setText("");
+        txtResultado.setText("");
+    }//GEN-LAST:event_btnLimpiarActionPerformed
 
     
     public static void main(String args[]) {
