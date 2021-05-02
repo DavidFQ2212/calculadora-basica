@@ -1,8 +1,11 @@
 
 package vista;
 
+import calculadora.CALCULADORA;
+
 
 public class Vista extends javax.swing.JFrame {
+CALCULADORA operacion = new CALCULADORA();
 
     public Vista() {
         initComponents();
@@ -178,23 +181,44 @@ public class Vista extends javax.swing.JFrame {
 
     private void btnSumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSumaActionPerformed
         //suma
+        float numero1 = Float.parseFloat(txtNum1.getText());
+        float numero2 = Float.parseFloat(txtNum2.getText());
+        
+        float res = operacion.Suma(numero1,numero2);
+       String res1 = String.valueOf(res);
+        txtResultado.setText(res1);
     }//GEN-LAST:event_btnSumaActionPerformed
 
     private void btnRestaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRestaActionPerformed
         //resta
+        float numero1 = Float.parseFloat(txtNum1.getText());
+        float numero2 = Float.parseFloat(txtNum2.getText());
+         float res = operacion.Resta(numero1,numero2);
+       String res1 = String.valueOf(res);
+        txtResultado.setText(res1);
     }//GEN-LAST:event_btnRestaActionPerformed
 
     private void btnMultiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMultiActionPerformed
        //multi
+       float numero1 = Float.parseFloat(txtNum1.getText());
+        float numero2 = Float.parseFloat(txtNum2.getText());
+        float res = operacion.Multi(numero1,numero2);
+       String res1 = String.valueOf(res);
+        txtResultado.setText(res1);
     }//GEN-LAST:event_btnMultiActionPerformed
 
     private void btnDivicionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDivicionActionPerformed
         //divicion
+        float numero1 = Float.parseFloat(txtNum1.getText());
+        float numero2 = Float.parseFloat(txtNum2.getText());
+         float res = operacion.Divicion(numero1,numero2);
+       String res1 = String.valueOf(res);
+        txtResultado.setText(res1);
     }//GEN-LAST:event_btnDivicionActionPerformed
 
     
     public static void main(String args[]) {
-        CALCULADORA operacion = new CALCULADORA();
+        
         
              
         /* Set the Nimbus look and feel */
